@@ -1,0 +1,132 @@
+
+body {
+    background-color: #35397c;
+}
+
+#header {
+    font-size: 30px;
+    text-align: center;
+    color: rgba(255, 228, 196, 0.814);
+    animation: header_animation infinite;
+    animation-duration: 6s;
+    margin-bottom: 10rem;
+}
+
+#generated-content.hidden {
+    background: none !important;
+}
+
+#generated-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-bottom: 10rem;
+}
+
+.center-element {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#submit {
+    background-color: rgb(92, 184, 0);
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    font-size: 30px;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 40px;
+    box-shadow: 0 10px 0 rgba(92, 184, 0, 0.566), 0 20px 0 rgba(92, 184, 0, 0.201);
+    text-shadow: 2px 2px darkgrey;
+
+    transition: all 0.8s ease-in-out;
+}
+
+#submit:hover {
+    /* make some transition and gradient for colors */
+    color: lightgreen;
+    background-color: lightcoral;
+    background-image: linear-gradient(to bottom, lightcoral, rgb(21, 198, 21));
+    box-shadow: 5px -5px 5px greenyellow, 5px 10px 0 rgba(21, 198, 21, 0.583);
+}
+
+#submit:active {
+    /* this makes the button get pushed when clicked */
+    transform: translateY(20px);
+    box-shadow: 5px -8px 5px greenyellow, 5px 7px 0 rgba(21, 198, 21, 0.583);
+}
+/* this will ensure the button that appeared after the "Click me" button don't immediately got hovered */
+/* !important makes sure if there's multiple styling on one tag it will automatically chose the attribute with the !important one */
+.remove-button.no-hover {
+    pointer-events: none !important;
+    background-color: rgb(218, 71, 13);
+    background-image: none !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.remove-button {
+    background-color: rgb(218, 71, 13);
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    font-size: 30px;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 40px;
+    box-shadow: 0 10px 0 c, 0 20px 4px rgba(218, 71, 13, 0.179);
+    text-shadow: 2px 2px darkgrey;
+
+    transition: all 0.8s ease-in-out;
+}
+
+.remove-button:hover {
+    background-color: rgb(218, 71, 13);
+    background-image: linear-gradient(to bottom, rgb(243, 156, 26),rgb(193, 58, 4));
+    box-shadow: 5px -5px 5px rgba(218, 71, 13, 0.674) , 5px 10px 0 rgba(218, 71, 13, 0.806)
+}
+
+.remove-button:active {
+    /* this makes the button get pushed when clicked */
+    transform: translateY(20px);
+    box-shadow: 5px -8px 5px rgba(218, 71, 13, 0.674), 5px 7px 0 rgba(218, 71, 13, 0.806);
+}
+
+#content-list-parent {
+    list-style: none;
+    display: table;
+    padding: 20px 20px 20px 50px;
+}
+
+#content-list-parent > li {
+    display: table-row;
+}
+
+#content-list-parent > li > b {
+    display: table-cell;
+    padding-right: 3em;
+}
+
+#content-list-parent > li > span {
+    display: table-cell;
+    padding-right: 1em;
+}
+
+
+
+@keyframes header_animation {
+    0% {background-color: blue;}
+    25% {background-color: darkorange;}
+    50% {background-color: rgb(210, 10, 66);}
+    75% {background-color: darkgreen;}
+    100% {background-color: rgb(198, 12, 170);}
+}
